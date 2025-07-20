@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podman Web Server</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Podman Containerized Web Server</h1>
+            <p>Running on EC2 Red Hat with S3 Backup</p>
+        </header>
+        <main>
+            <section class="status">
+                <h2>Server Status</h2>
+                <p id="timestamp">Page loaded at: <span id="current-time"></span></p>
+                <p>Container ID: <span id="container-id">podman-webserver-001</span></p>
+            </section>
+            <section class="data">
+                <h2>Sample Data</h2>
+                <div id="data-display"></div>
+                <button onclick="loadData()">Load Sample Data</button>
+            </section>
+            <section class="backup-info">
+                <h2>Backup Information</h2>
+                <p>This application's data is automatically backed up to AWS S3</p>
+                <p>Last backup: <span id="last-backup">Not available</span></p>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
